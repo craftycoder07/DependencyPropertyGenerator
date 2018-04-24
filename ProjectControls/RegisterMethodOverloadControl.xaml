@@ -28,7 +28,7 @@
         </Label>
         <ComboBox Grid.Row="0"
                   Grid.Column="1"
-                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:ResiterMethodOverload}}}"/>
+                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:RegisterMethodOverload}}}"/>
 
         <!--Control elements-->
         <Label Grid.Row="1"

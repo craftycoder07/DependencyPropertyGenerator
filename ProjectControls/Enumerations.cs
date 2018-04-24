@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ProjectControls
 {
     [TypeConverter(typeof(EnumDescriptionTypeConverter))]
-    public enum ResiterMethodOverload
+    public enum RegisterMethodOverload
     {
         [Description("With No Argument")]
         Basic = 1,

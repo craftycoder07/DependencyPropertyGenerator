@@ -96,9 +96,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resource\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ProjectControls\ProjectControls.csproj">
       <Project>{30f0d003-2820-4ef6-a12d-8c7d2cc882be}</Project>
