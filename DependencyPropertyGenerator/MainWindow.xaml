@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DependencyPropertyGenerator"
+        xmlns:pc="clr-namespace:ProjectControls;assembly=ProjectControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel x:Name="MainPanel"
+                Orientation="Vertical">
+        <pc:RegisterMethodOverloadControl>
+            
+        </pc:RegisterMethodOverloadControl>
+    </StackPanel>
 </Window>
