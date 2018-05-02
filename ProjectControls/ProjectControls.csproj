@@ -46,6 +46,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrameworkPropertyMetadataControl.xaml.cs">
+      <DependentUpon>FrameworkPropertyMetadataControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper\EnumBindingSourceExtension.cs" />
     <Compile Include="Enumerations.cs" />
     <Compile Include="Helper\EnumDescriptionTypeConverter.cs" />
@@ -55,6 +58,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="FrameworkPropertyMetadataControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegisterMethodOverloadControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

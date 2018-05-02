@@ -10,7 +10,10 @@
     <StackPanel x:Name="MainPanel"
                 Orientation="Vertical">
         <pc:RegisterMethodOverloadControl>
-            
+
         </pc:RegisterMethodOverloadControl>
+        <pc:FrameworkPropertyMetadataControl>
+            
+        </pc:FrameworkPropertyMetadataControl>
     </StackPanel>
 </Window>
