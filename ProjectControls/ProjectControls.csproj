@@ -56,6 +56,9 @@
     <Compile Include="RegisterMethodOverloadControl.xaml.cs">
       <DependentUpon>RegisterMethodOverloadControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValidationCallbackControl.xaml.cs">
+      <DependentUpon>ValidationCallbackControl.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="FrameworkPropertyMetadataControl.xaml">
@@ -63,6 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegisterMethodOverloadControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ValidationCallbackControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

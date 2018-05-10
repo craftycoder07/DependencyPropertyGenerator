@@ -30,7 +30,8 @@
                 Select FrameworkProperty Overload
             </Label>
             <ComboBox Grid.Column="1"
-                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:FrameworkPropertyMetadataOverload}}}"/>
+                      ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:FrameworkPropertyMetadataOverload}}}"
+                      SelectionChanged="FrameworkProperty_SelectionChanged"/>
         </Grid>
 
         <Grid Name="DefaultValue" 

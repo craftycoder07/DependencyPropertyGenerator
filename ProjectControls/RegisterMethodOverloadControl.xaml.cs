@@ -20,9 +20,23 @@ namespace ProjectControls
     /// </summary>
     public partial class RegisterMethodOverloadControl : UserControl
     {
+        public delegate void RegisterMethodOverloadSelectionChangedHandler(RegisterMethodOverload selectedValue);
+
+        public event RegisterMethodOverloadSelectionChangedHandler RegisterMethodOverload_SelectionChanged;
+
         public RegisterMethodOverloadControl()
         {
             InitializeComponent();
+        }
+
+        private void RegisterMethodOverloadComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+
+            if (comboBox.SelectedItem != null)
+            {
+                RegisterMethodOverload_SelectionChanged((RegisterMethodOverload)comboBox.SelectedItem);
+            }
         }
     }
 }

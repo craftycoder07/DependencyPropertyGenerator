@@ -9,11 +9,15 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel x:Name="MainPanel"
                 Orientation="Vertical">
-        <pc:RegisterMethodOverloadControl>
+        <pc:RegisterMethodOverloadControl Name="RegisterMethodOverloadControl" 
+            RegisterMethodOverload_SelectionChanged="RegisterMethodOverloadControl_RegisterMethodOverload_SelectionChanged">
 
         </pc:RegisterMethodOverloadControl>
-        <pc:FrameworkPropertyMetadataControl>
+        <pc:FrameworkPropertyMetadataControl Name="FrameworkPropertyMetadataControl">
             
         </pc:FrameworkPropertyMetadataControl>
+        <pc:ValidationCallbackControl Name="ValidationCallbackControl">
+            
+        </pc:ValidationCallbackControl>
     </StackPanel>
 </Window>
