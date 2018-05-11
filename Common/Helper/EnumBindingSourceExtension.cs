@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 
-namespace ProjectControls
+namespace Common.Helper
 {
     public class EnumBindingSourceExtension : MarkupExtension
     {

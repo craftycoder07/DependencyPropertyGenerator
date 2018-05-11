@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common;
+using Common.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -155,6 +157,20 @@ namespace ProjectControls
                 }
             }
             
+        }
+
+        public FrameworkPropertyMetadataModel GetControlValues()
+        {
+            FrameworkPropertyMetadataModel frameworkPropertyMetadataModel = new FrameworkPropertyMetadataModel();
+
+            frameworkPropertyMetadataModel.DefaultValue = tBDefaultValue;
+            //frameworkPropertyMetadataModel.FrameworkPropertyMetadataOptions = 
+            frameworkPropertyMetadataModel.PropertyChangedCallbackName = tBPropertyChangedCallback.Text;
+            frameworkPropertyMetadataModel.CoerceValueCallbackName = tBCoerceValueCallback.Text;
+            frameworkPropertyMetadataModel.Animation = (BooleanEnum)cBAnimation.SelectedValue;
+            frameworkPropertyMetadataModel.UpdateSourceTriggerName = (Common.UpdateSourceTrigger)cBUpdateSourceTrigger.SelectedValue;
+
+            return frameworkPropertyMetadataModel;
         }
     }
 }

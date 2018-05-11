@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DependencyPropertyGenerator.Model
+namespace Common.Model
 {
-    class RegisterMethodModel
+    public class RegisterMethodModel
     {
         public string NameOfProperty { set; get; }
         public string TypeOfProperty { set; get; }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common;
+using Common.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,26 +27,26 @@ namespace DependencyPropertyGenerator
             InitializeComponent();
         }
 
-        private void RegisterMethodOverloadControl_RegisterMethodOverload_SelectionChanged(ProjectControls.RegisterMethodOverload selectedValue)
+        private void RegisterMethodOverloadControl_RegisterMethodOverload_SelectionChanged(RegisterMethodOverload selectedValue)
         {
 
             switch(selectedValue)
             {
-                case ProjectControls.RegisterMethodOverload.Basic:
+                case RegisterMethodOverload.Basic:
 
                     FrameworkPropertyMetadataControl.Visibility = Visibility.Collapsed;
                     ValidationCallbackControl.Visibility = Visibility.Collapsed;
 
                     break;
 
-                case ProjectControls.RegisterMethodOverload.WithPropertyMetadata:
+                case RegisterMethodOverload.WithPropertyMetadata:
 
                     FrameworkPropertyMetadataControl.Visibility = Visibility.Visible;
                     ValidationCallbackControl.Visibility = Visibility.Collapsed;
 
                     break;
 
-                case ProjectControls.RegisterMethodOverload.WithPropertyMetadataAndCallback:
+                case RegisterMethodOverload.WithPropertyMetadataAndCallback:
 
                     FrameworkPropertyMetadataControl.Visibility = Visibility.Visible;
                     ValidationCallbackControl.Visibility = Visibility.Visible;
@@ -57,6 +59,47 @@ namespace DependencyPropertyGenerator
 
                     break;
             }
+        }
+
+        private void btnGenerateDependencyProperty_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if(button.Content.Equals("Generate Dependency Property"))
+            {
+                UserControlPanel.Visibility = Visibility.Collapsed;
+                OutputPanel.Visibility = Visibility.Visible;
+                btnGenerateDependencyProperty.Content = "Back";
+            }
+            else
+            {
+                UserControlPanel.Visibility = Visibility.Visible;
+                OutputPanel.Visibility = Visibility.Collapsed;
+                btnGenerateDependencyProperty.Content = "Generate Dependency Property";
+            }
+        }
+
+        private RegisterMethodModel GetInputData()
+        {
+            FrameworkPropertyMetadataModel frameworkPropertyMetadataModel = null;
+            string validateValueCallbackName = string.Empty;
+            RegisterMethodModel registerMethodModel = null;
+
+            try
+            {
+                frameworkPropertyMetadataModel = FrameworkPropertyMetadataControl.GetControlValues();
+                validateValueCallbackName = ValidationCallbackControl.GetControlValues();
+                registerMethodModel = RegisterMethodOverloadControl.GetControlValues();
+
+                registerMethodModel.FrameworkPropertyMetadata = frameworkPropertyMetadataModel;
+                registerMethodModel.ValidateValueCallbackName = validateValueCallbackName;
+            }
+            catch(Exception e)
+            {
+
+            }
+
+            return registerMethodModel;
+
         }
     }
 }

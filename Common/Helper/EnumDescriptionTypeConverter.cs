@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectControls.Helper
+namespace Common.Helper
 {
     public class EnumDescriptionTypeConverter : EnumConverter
     {

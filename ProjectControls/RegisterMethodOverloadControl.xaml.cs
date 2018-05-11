@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common;
+using Common.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +39,17 @@ namespace ProjectControls
             {
                 RegisterMethodOverload_SelectionChanged((RegisterMethodOverload)comboBox.SelectedItem);
             }
+        }
+
+        public RegisterMethodModel GetControlValues()
+        {
+            RegisterMethodModel registerMethodModel = new RegisterMethodModel();
+
+            registerMethodModel.NameOfProperty = tBNameOfTheProperty.Text;
+            registerMethodModel.TypeOfProperty = tBTypeOfTheProperty.Text;
+            registerMethodModel.OwnerOfProperty = tBOwnerOfTheProperty.Text;
+
+            return registerMethodModel;
         }
     }
 }

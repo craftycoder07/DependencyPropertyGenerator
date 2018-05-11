@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DependencyPropertyGenerator.Model
+namespace Common.Model
 {
-    class FrameworkPropertyMetadataModel
+    public class FrameworkPropertyMetadataModel
     {
         public Object DefaultValue { set; get; }
         public Dictionary<string, Boolean> FrameworkPropertyMetadataOptions = new Dictionary<string, Boolean>();
-        public Boolean PreventAnimation { set; get; }
+        public BooleanEnum Animation { set; get; }
         public string PropertyChangedCallbackName { set; get; }
         public string CoerceValueCallbackName { set; get; }
-        public string DataBindingUpdateTriggerName { set; get; }
+        public UpdateSourceTrigger UpdateSourceTriggerName { set; get; }
 
         public FrameworkPropertyMetadataModel()
         {

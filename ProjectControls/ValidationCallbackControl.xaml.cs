@@ -24,5 +24,10 @@ namespace ProjectControls
         {
             InitializeComponent();
         }
+
+        public string GetControlValues()
+        {
+            return tBValidationCallbackName.Text;
+        }
     }
 }

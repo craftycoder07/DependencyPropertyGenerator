@@ -4,9 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjectControls"
+             xmlns:common="clr-namespace:Common;assembly=Common"
+             xmlns:commonhelper="clr-namespace:Common.Helper;assembly=Common"
+             xmlns:commonmodel="clr-namespace:Common.Model;assembly=Common"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -29,8 +32,9 @@
                VerticalContentAlignment="Center">
                 Select FrameworkProperty Overload
             </Label>
+
             <ComboBox Grid.Column="1"
-                      ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:FrameworkPropertyMetadataOverload}}}"
+                      ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:FrameworkPropertyMetadataOverload}}}"
                       SelectionChanged="FrameworkProperty_SelectionChanged"/>
         </Grid>
 
@@ -42,12 +46,14 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
-               Background="AliceBlue"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center">
+                   Name="lblDefaultValue"
+                   Background="AliceBlue"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
                 Default Value
             </Label>
-            <TextBox Grid.Column="1">
+            <TextBox Grid.Column="1"
+                     Name ="tBDefaultValue">
             </TextBox>
         </Grid>
 
@@ -59,13 +65,15 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
-               Background="AliceBlue"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center">
-               FrameworkMetadata Option
+                   Name="lblFrameworkMetadataOPtion"
+                   Background="AliceBlue"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
+                FrameworkMetadata Option
             </Label>
             <ComboBox Grid.Column="1"
-                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:FrameworkPropertyMetadataOptions}}}"/>
+                      Name="cBFrameworkMetadataOPtion"
+                      ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:FrameworkPropertyMetadataOptions}}}"/>
         </Grid>
 
         <Grid Name="PropertyChangedCallback" 
@@ -76,12 +84,14 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
-               Background="AliceBlue"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center">
+                   Name="lblPropertyChangedCallback"
+                   Background="AliceBlue"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
                 PropertyChanged Callback
             </Label>
-            <TextBox Grid.Column="1">
+            <TextBox Grid.Column="1"
+                     Name="tBPropertyChangedCallback">
             </TextBox>
         </Grid>
 
@@ -93,12 +103,14 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
-               Background="AliceBlue"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center">
+                   Name="lblCoerceValueCallback"
+                   Background="AliceBlue"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
                 CoerceValue Callback
             </Label>
-            <TextBox Grid.Column="1">
+            <TextBox Grid.Column="1"
+                     Name="tBCoerceValueCallback">
             </TextBox>
         </Grid>
 
@@ -110,13 +122,15 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
-               Background="AliceBlue"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center">
+                   Name="lblAnimation"
+                   Background="AliceBlue"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
                 Animation
             </Label>
             <ComboBox Grid.Column="1"
-                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:BooleanEnum}}}"/>
+                      Name="cBAnimation"
+                      ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:BooleanEnum}}}"/>
         </Grid>
 
         <Grid Name="UpdateSourceTrigger" 
@@ -127,13 +141,15 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0"
-               Background="AliceBlue"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center">
+                   Name="lblUpdateSourceTrigger"
+                   Background="AliceBlue"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center">
                 UpdateSourceTrigger
             </Label>
             <ComboBox Grid.Column="1"
-                  ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:UpdateSourceTrigger}}}"/>
+                      Name="cBUpdateSourceTrigger"
+                      ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:UpdateSourceTrigger}}}"/>
         </Grid>
 
 

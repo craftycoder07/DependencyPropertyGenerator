@@ -6,18 +6,50 @@
         xmlns:local="clr-namespace:DependencyPropertyGenerator"
         xmlns:pc="clr-namespace:ProjectControls;assembly=ProjectControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Width="800"
+        SizeToContent="Height">
     <StackPanel x:Name="MainPanel"
                 Orientation="Vertical">
-        <pc:RegisterMethodOverloadControl Name="RegisterMethodOverloadControl" 
+        <StackPanel Name="UserControlPanel">
+            <pc:RegisterMethodOverloadControl Name="RegisterMethodOverloadControl" 
             RegisterMethodOverload_SelectionChanged="RegisterMethodOverloadControl_RegisterMethodOverload_SelectionChanged">
 
-        </pc:RegisterMethodOverloadControl>
-        <pc:FrameworkPropertyMetadataControl Name="FrameworkPropertyMetadataControl">
-            
-        </pc:FrameworkPropertyMetadataControl>
-        <pc:ValidationCallbackControl Name="ValidationCallbackControl">
-            
-        </pc:ValidationCallbackControl>
+            </pc:RegisterMethodOverloadControl>
+            <pc:FrameworkPropertyMetadataControl Name="FrameworkPropertyMetadataControl">
+
+            </pc:FrameworkPropertyMetadataControl>
+            <pc:ValidationCallbackControl Name="ValidationCallbackControl">
+
+            </pc:ValidationCallbackControl>
+        </StackPanel>
+
+        <StackPanel Name="OutputPanel"
+                    Visibility="Collapsed">
+            <TextBox Name="tBGeneratedDependencyProperty" TextWrapping="Wrap">
+                The Pixel 2 and Pixel 2 XL remain the world’s best smartphones (and with good reason). But, apart from one accident, the very existence of Google GOOGL +1.48%’s hotly anticipated Pixel 3 and Pixel 3 XL has remained a mystery. Until now… 
+
+Shedding new light on Google’s plans is arguably the web’s most famous tipster Evan Blass, aka @evleaks. In a new tweet, Blass - who has an unparalleled record of on-point leaks - confirmed both the existence of the new Pixels and their launch date.
+                Citing “a reliable source”, Blass confirmed Google will indeed retain its two phone strategy (unlike Apple which is moving to three iPhone X designs) and we will get both a ‘Pixel 3’ and a ‘Pixel 3 XL’. And both will be expensive.
+
+
+As for the launch, Blass states Google will repeat the inaugural hardware event it held last year on October 4th and the Pixel 3 and Pixel 3 XL will be the headline announcements. Google has yet to confirm this event or its timing but, given Blass’ assurance, I’d expect a similar late September/early October timeframe making the new Pixels two of the last major smartphone releases of the year.
+
+Unfortunately, we still know next-to-nothing about the hardware changes Google will make to both phones (Wishlist: 3x optical zoom, much smaller bezels, no notch and louder stereo speakers - please). But Blass did add that Google will use the hardware event to also launch the second generation of its controversial Pixel Buds and introduce its first Pixel-branded smartwatch.
+                For the record, I like the original Pixel Buds a lot more than most despite their fiddly design (audio quality and personal assistant integration easily top Apple’s AirPods) so some thoughtful tweaks here could result in a major hit. As for a Pixel watch, it feels like Google’s last chance to breathe life into its struggling WearOS (formally Android Wear) platform. For that, it’s probably now or never.
+
+But the Pixel 3 and Pixel 3 XL will be the main attractions (talk of a third model minus Pixel branding seems to be fading) and with the Pixel 2 and Pixel 2 XL still delivering the best point-and-shoot smartphone photography on the market, all eyes will be on whether Google rests on its laurels this year or takes another seismic leap forward.
+
+All eyes will also be on whether Google - at the umpteenth time of asking - can, at last, keep its new Pixels in stock…
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Name="ButtonPanel">
+            <Button Name="btnGenerateDependencyProperty"
+                Width="200"
+                Margin="15"
+                Click="btnGenerateDependencyProperty_Click">
+                Generate Dependency Property
+            </Button>
+        </StackPanel>
     </StackPanel>
 </Window>

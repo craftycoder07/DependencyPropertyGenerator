@@ -1,4 +1,4 @@
-﻿using ProjectControls.Helper;
+﻿using Common.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectControls
+namespace Common
 {
+
     [TypeConverter(typeof(EnumDescriptionTypeConverter))]
     public enum RegisterMethodOverload
     {
@@ -78,9 +79,7 @@ namespace ProjectControls
         LostFocus = 3,
         PropertyChanged = 4
     }
-
-    class Enumerations
+    public class Enumerations
     {
-
     }
 }
