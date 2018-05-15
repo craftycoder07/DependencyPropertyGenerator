@@ -46,6 +46,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyPropertyControl.xaml.cs">
+      <DependentUpon>DependencyPropertyControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrameworkPropertyMetadataControl.xaml.cs">
       <DependentUpon>FrameworkPropertyMetadataControl.xaml</DependentUpon>
     </Compile>
@@ -58,6 +61,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DependencyPropertyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrameworkPropertyMetadataControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

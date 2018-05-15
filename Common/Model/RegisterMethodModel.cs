@@ -8,10 +8,9 @@ namespace Common.Model
 {
     public class RegisterMethodModel
     {
+        public RegisterMethodOverload SelectedOverload { set; get; }
         public string NameOfProperty { set; get; }
         public string TypeOfProperty { set; get; }
         public string OwnerOfProperty { set; get; }
-        public FrameworkPropertyMetadataModel FrameworkPropertyMetadata { set; get; }
-        public string ValidateValueCallbackName { set; get; }
     }
 }

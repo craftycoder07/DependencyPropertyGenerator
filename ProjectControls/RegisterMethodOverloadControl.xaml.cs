@@ -45,6 +45,7 @@ namespace ProjectControls
         {
             RegisterMethodModel registerMethodModel = new RegisterMethodModel();
 
+            registerMethodModel.SelectedOverload = (RegisterMethodOverload)cBRegisterMethodOverload.SelectedValue;
             registerMethodModel.NameOfProperty = tBNameOfTheProperty.Text;
             registerMethodModel.TypeOfProperty = tBTypeOfTheProperty.Text;
             registerMethodModel.OwnerOfProperty = tBOwnerOfTheProperty.Text;

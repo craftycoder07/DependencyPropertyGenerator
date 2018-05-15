@@ -164,11 +164,17 @@ namespace ProjectControls
             FrameworkPropertyMetadataModel frameworkPropertyMetadataModel = new FrameworkPropertyMetadataModel();
 
             frameworkPropertyMetadataModel.DefaultValue = tBDefaultValue;
-            //frameworkPropertyMetadataModel.FrameworkPropertyMetadataOptions = 
             frameworkPropertyMetadataModel.PropertyChangedCallbackName = tBPropertyChangedCallback.Text;
             frameworkPropertyMetadataModel.CoerceValueCallbackName = tBCoerceValueCallback.Text;
-            frameworkPropertyMetadataModel.Animation = (BooleanEnum)cBAnimation.SelectedValue;
-            frameworkPropertyMetadataModel.UpdateSourceTriggerName = (Common.UpdateSourceTrigger)cBUpdateSourceTrigger.SelectedValue;
+            if (cBAnimation.SelectedItem != null)
+            {
+                frameworkPropertyMetadataModel.Animation = (BooleanEnum)cBAnimation.SelectedValue;
+            }
+
+            if (cBUpdateSourceTrigger.SelectedItem != null)
+            {
+                frameworkPropertyMetadataModel.UpdateSourceTriggerName = (Common.UpdateSourceTrigger)cBUpdateSourceTrigger.SelectedValue;
+            }
 
             return frameworkPropertyMetadataModel;
         }

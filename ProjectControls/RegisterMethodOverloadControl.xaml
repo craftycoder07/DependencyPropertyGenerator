@@ -29,7 +29,8 @@
                VerticalContentAlignment="Center">
             Select Resgister method Overload
         </Label>
-        <ComboBox Grid.Row="0"
+        <ComboBox Name="cBRegisterMethodOverload"
+                  Grid.Row="0"
                   Grid.Column="1"
                   ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:RegisterMethodOverload}}}"
                   SelectionChanged="RegisterMethodOverloadComboBox_SelectionChanged"/>

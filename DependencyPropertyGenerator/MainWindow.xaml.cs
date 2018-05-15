@@ -64,10 +64,17 @@ namespace DependencyPropertyGenerator
         private void btnGenerateDependencyProperty_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
+            DependencyPropertyModel dependencyPropertyModel = new DependencyPropertyModel();
+
             if(button.Content.Equals("Generate Dependency Property"))
             {
+                dependencyPropertyModel = GetInputDataFromControls(dependencyPropertyModel);
+
                 UserControlPanel.Visibility = Visibility.Collapsed;
                 OutputPanel.Visibility = Visibility.Visible;
+
+                DependencyPropertyControl.GenerateDependencyProperty(dependencyPropertyModel);
+
                 btnGenerateDependencyProperty.Content = "Back";
             }
             else
@@ -78,27 +85,24 @@ namespace DependencyPropertyGenerator
             }
         }
 
-        private RegisterMethodModel GetInputData()
+        private DependencyPropertyModel GetInputDataFromControls(DependencyPropertyModel dependencyPropertyModel)
         {
-            FrameworkPropertyMetadataModel frameworkPropertyMetadataModel = null;
-            string validateValueCallbackName = string.Empty;
-            RegisterMethodModel registerMethodModel = null;
-
             try
             {
-                frameworkPropertyMetadataModel = FrameworkPropertyMetadataControl.GetControlValues();
-                validateValueCallbackName = ValidationCallbackControl.GetControlValues();
-                registerMethodModel = RegisterMethodOverloadControl.GetControlValues();
-
-                registerMethodModel.FrameworkPropertyMetadata = frameworkPropertyMetadataModel;
-                registerMethodModel.ValidateValueCallbackName = validateValueCallbackName;
+                dependencyPropertyModel.RegisterMethod = RegisterMethodOverloadControl.GetControlValues();
+                dependencyPropertyModel.FrameworkPropertyMetadata = FrameworkPropertyMetadataControl.GetControlValues();
+                dependencyPropertyModel.ValidateValueCallbackName = ValidationCallbackControl.GetControlValues();                
             }
             catch(Exception e)
             {
 
             }
 
-            return registerMethodModel;
+            return dependencyPropertyModel;
+        }
+
+        private void GenerateDependencyProperty(DependencyPropertyModel dependencyPropertyModel)
+        {
 
         }
     }

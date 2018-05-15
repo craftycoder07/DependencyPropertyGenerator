@@ -25,7 +25,7 @@
 
         <StackPanel Name="OutputPanel"
                     Visibility="Collapsed">
-            <TextBox Name="tBGeneratedDependencyProperty" TextWrapping="Wrap">
+            <TextBox Name="tBGeneratedDependencyProperty" TextWrapping="Wrap" Visibility="Collapsed">
                 The Pixel 2 and Pixel 2 XL remain the world’s best smartphones (and with good reason). But, apart from one accident, the very existence of Google GOOGL +1.48%’s hotly anticipated Pixel 3 and Pixel 3 XL has remained a mystery. Until now… 
 
 Shedding new light on Google’s plans is arguably the web’s most famous tipster Evan Blass, aka @evleaks. In a new tweet, Blass - who has an unparalleled record of on-point leaks - confirmed both the existence of the new Pixels and their launch date.
@@ -41,6 +41,10 @@ But the Pixel 3 and Pixel 3 XL will be the main attractions (talk of a third mod
 
 All eyes will also be on whether Google - at the umpteenth time of asking - can, at last, keep its new Pixels in stock…
             </TextBox>
+
+            <pc:DependencyPropertyControl Name="DependencyPropertyControl">
+                
+            </pc:DependencyPropertyControl>
         </StackPanel>
 
         <StackPanel Name="ButtonPanel">
