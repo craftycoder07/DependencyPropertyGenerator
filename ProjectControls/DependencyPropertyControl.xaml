@@ -7,9 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBox Name="tBDeclareDependencyProperty">
-        </TextBox>
-        <TextBox Name="tBRegisterDependencyProperty">
+        <TextBox Name="tBDependencyProperty">
+
         </TextBox>
     </StackPanel>
 </UserControl>

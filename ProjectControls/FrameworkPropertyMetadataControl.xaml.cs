@@ -163,6 +163,7 @@ namespace ProjectControls
         {
             FrameworkPropertyMetadataModel frameworkPropertyMetadataModel = new FrameworkPropertyMetadataModel();
 
+            //frameworkPropertyMetadataModel.SelectedOverload = (FrameworkPropertyMetadataOverload)cBFrameworkPropertyMetadataOverload.SelectedValue;
             frameworkPropertyMetadataModel.DefaultValue = tBDefaultValue;
             frameworkPropertyMetadataModel.PropertyChangedCallbackName = tBPropertyChangedCallback.Text;
             frameworkPropertyMetadataModel.CoerceValueCallbackName = tBCoerceValueCallback.Text;

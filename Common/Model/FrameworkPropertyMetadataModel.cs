@@ -8,6 +8,7 @@ namespace Common.Model
 {
     public class FrameworkPropertyMetadataModel
     {
+        public FrameworkPropertyMetadataOverload SelectedOverload { set; get; }
         public Object DefaultValue { set; get; }
         public Dictionary<string, Boolean> FrameworkPropertyMetadataOptions = new Dictionary<string, Boolean>();
         public BooleanEnum Animation { set; get; }
