@@ -7,6 +7,7 @@
              xmlns:common="clr-namespace:Common;assembly=Common"
              xmlns:commonhelper="clr-namespace:Common.Helper;assembly=Common"
              xmlns:commonmodel="clr-namespace:Common.Model;assembly=Common"
+             xmlns:pc="clr-namespace:ProjectControls;assembly=ProjectControls"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -34,14 +35,14 @@
                 Select FrameworkProperty Overload
             </Label>
 
-            <!--<ComboBox Name="cBFrameworkPropertyMetadataOverload"
+            <ComboBox Name="cBFrameworkPropertyMetadataOverload"
                       Grid.Column="1"
                       ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:FrameworkPropertyMetadataOverload}}}"
-                      SelectionChanged="FrameworkProperty_SelectionChanged"/>-->
+                      SelectionChanged="FrameworkProperty_SelectionChanged"/>
 
-            <dxe:ComboBoxEdit Name ="cBEFrameworkPropertyMetadataOverload"
+            <!--<dxe:ComboBoxEdit Name ="cBEFrameworkPropertyMetadataOverload"
                               Grid.Column="1"
-                              ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:FrameworkPropertyMetadataOverload}}}"/>
+                              ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:FrameworkPropertyMetadataOverload}}}"/>-->
         </Grid>
 
         <Grid Name="DefaultValue" 
@@ -74,12 +75,21 @@
                    Name="lblFrameworkMetadataOPtion"
                    Background="AliceBlue"
                    HorizontalContentAlignment="Center"
-                   VerticalContentAlignment="Center">
+                   VerticalContentAlignment="Center">Custom markup 
                 FrameworkMetadata Option
             </Label>
-            <ComboBox Grid.Column="1"
-                      Name="cBFrameworkMetadataOPtion"
-                      ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:FrameworkPropertyMetadataOptions}}}"/>
+            <!--<ComboBox Grid.Column="1"
+                      x:Name="cBFrameworkMetadataOptionTest"
+                      ItemsSource="{Binding Source={commonhelper:MultiSelectComboBoxEnumBinding common:FrameworkPropertyMetadataOptions, commonmodel:MultiComboBoxModel}}">
+            </ComboBox>-->
+            <!--<pc:MultiSelectComboBox Grid.Column="1"
+                                    x:Name="cBFrameworkMetadataOption"
+                                    ItemsSource="{Binding Source={commonhelper:MultiSelectComboBoxEnumBinding common:FrameworkPropertyMetadataOptions, commonmodel:MultiComboBoxModel}}">
+            </pc:MultiSelectComboBox>-->
+            <local:MultiSelectComboBox Grid.Column="1"
+                                    x:Name="cBFrameworkMetadataOption"
+                                    ItemsSource="{Binding Source={commonhelper:MultiSelectComboBoxEnumBinding common:FrameworkPropertyMetadataOptions, commonmodel:MultiComboBoxModel}}">
+            </local:MultiSelectComboBox>
         </Grid>
 
         <Grid Name="PropertyChangedCallback" 

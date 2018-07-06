@@ -50,8 +50,10 @@
     <Compile Include="Enumerations.cs" />
     <Compile Include="Helper\EnumBindingSourceExtension.cs" />
     <Compile Include="Helper\EnumDescriptionTypeConverter.cs" />
+    <Compile Include="Helper\MultiSelectComboBoxEnumBindingExtension.cs" />
     <Compile Include="Model\DependencyPropertyModel.cs" />
     <Compile Include="Model\FrameworkPropertyMetadataModel.cs" />
+    <Compile Include="Model\MultiComboBoxModel.cs" />
     <Compile Include="Model\RegisterMethodModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
