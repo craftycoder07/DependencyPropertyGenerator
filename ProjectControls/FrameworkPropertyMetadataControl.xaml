@@ -87,8 +87,8 @@
                                     ItemsSource="{Binding Source={commonhelper:MultiSelectComboBoxEnumBinding common:FrameworkPropertyMetadataOptions, commonmodel:MultiComboBoxModel}}">
             </pc:MultiSelectComboBox>-->
             <local:MultiSelectComboBox Grid.Column="1"
-                                    x:Name="cBFrameworkMetadataOption"
-                                    ItemsSource="{Binding Source={commonhelper:MultiSelectComboBoxEnumBinding common:FrameworkPropertyMetadataOptions, commonmodel:MultiComboBoxModel}}">
+                                       x:Name="cBFrameworkMetadataOption"
+                                       ItemsSource="{Binding Source={commonhelper:MultiSelectComboBoxEnumBinding common:FrameworkPropertyMetadataOptions, commonmodel:MultiComboBoxModel}}">
             </local:MultiSelectComboBox>
         </Grid>
 

@@ -60,15 +60,26 @@ namespace Common.Helper
                 throw new InvalidOperationException("The MultiSelectComboBoxModel must be specified.");
 
             Type actualEnumType = Nullable.GetUnderlyingType(_enumType) ?? _enumType;
-            Array enumValues = Enum.GetValues(actualEnumType);
 
             Type genericListType = typeof(List<>).MakeGenericType(_multiSelectModel);
             IList finalList = (IList)Activator.CreateInstance(genericListType);
 
-            foreach(var enumValue in enumValues)
+
+            string[] enumValues = Enum.GetNames(actualEnumType);
+            Dictionary<string, object> finalDictionary = new Dictionary<string, object>();
+
+            foreach(string type in enumValues)
             {
-                finalList.Add(Activator.CreateInstance(_multiSelectModel, new object[] { enumValue.ToString(), false}));
+                string key = type;
+                object value = Convert.ChangeType((Enum.Parse(_enumType, type)), actualEnumType);
+
+                finalDictionary.Add(key, value);
             }
+
+            //foreach(var enumValue in enumValues)
+            //{
+            //    finalList.Add(Activator.CreateInstance(_multiSelectModel, new object[] { enumValue.ToString(), false}));
+            //}
             //if (actualEnumType == _enumType)
             //    return finalList;
 
@@ -76,7 +87,7 @@ namespace Common.Helper
             //enumValues.CopyTo(tempArray, 1);
             //return tempArray;
 
-            return finalList;
+            return finalDictionary;
         }
     }
 }
