@@ -10,7 +10,7 @@
              xmlns:commonmodel="clr-namespace:Common.Model;assembly=Common"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
+    <!--<UserControl.Resources>
         <LinearGradientBrush x:Key="NormalBrush" StartPoint="0,0" EndPoint="0,1">
             <GradientBrush.GradientStops>
                 <GradientStopCollection>
@@ -96,7 +96,7 @@
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter TargetName="Border" Property="Background" Value="{StaticResource DisabledBackgroundBrush}" />
-                    <!--<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DisabledBorderBrush}" />-->
+                    --><!--<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DisabledBorderBrush}" />--><!--
                     <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>
                     <Setter TargetName="Arrow" Property="Fill" Value="{StaticResource DisabledForegroundBrush}" />
                 </Trigger>
@@ -131,7 +131,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </UserControl.Resources>
+    </UserControl.Resources>-->
 
     <ComboBox
         x:Name="CheckableCombo"
@@ -174,7 +174,7 @@
                             <Border 
                                     x:Name="DropDownBorder"
                                     BorderThickness="1"
-                                    Background="{StaticResource WindowBackgroundBrush}"
+                                    Background="White"
                                     BorderBrush="Black"/>
                             <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True" DataContext="{Binding}">
                                 <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />

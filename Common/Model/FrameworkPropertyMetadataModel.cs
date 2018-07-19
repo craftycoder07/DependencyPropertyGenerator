@@ -10,15 +10,10 @@ namespace Common.Model
     {
         public FrameworkPropertyMetadataOverload SelectedOverload { set; get; }
         public Object DefaultValue { set; get; }
-        public Dictionary<string, Boolean> FrameworkPropertyMetadataOptions = new Dictionary<string, Boolean>();
+        public Dictionary<string, object> FrameworkPropertyMetadataOptions = new Dictionary<string, object>();
         public BooleanEnum Animation { set; get; }
         public string PropertyChangedCallbackName { set; get; }
         public string CoerceValueCallbackName { set; get; }
         public UpdateSourceTrigger UpdateSourceTriggerName { set; get; }
-
-        public FrameworkPropertyMetadataModel()
-        {
-            FrameworkPropertyMetadataOptions = Enum.GetNames(typeof(FrameworkPropertyMetadataOptions)).ToDictionary(key => key, value => false);
-        }
     }
 }

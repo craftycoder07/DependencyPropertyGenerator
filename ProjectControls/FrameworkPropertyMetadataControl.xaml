@@ -168,6 +168,5 @@
                       ItemsSource="{Binding Source={commonhelper:EnumBindingSource {x:Type common:UpdateSourceTrigger}}}"/>
         </Grid>
 
-
     </Grid>
 </UserControl>

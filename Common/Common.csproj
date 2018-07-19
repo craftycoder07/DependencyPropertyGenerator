@@ -50,6 +50,7 @@
     <Compile Include="Enumerations.cs" />
     <Compile Include="Helper\EnumBindingSourceExtension.cs" />
     <Compile Include="Helper\EnumDescriptionTypeConverter.cs" />
+    <Compile Include="Helper\Extensions.cs" />
     <Compile Include="Helper\MultiSelectComboBoxEnumBindingExtension.cs" />
     <Compile Include="Model\DependencyPropertyModel.cs" />
     <Compile Include="Model\FrameworkPropertyMetadataModel.cs" />
